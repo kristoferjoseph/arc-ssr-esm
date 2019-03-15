@@ -1,7 +1,0 @@
-{
-  "name": "poc-esm-get-modules-ui-000module",
-  "dependencies": {
-    "@architect/data": "^2.0.14",
-    "@architect/functions": "^2.0.15"
-  }
-}
