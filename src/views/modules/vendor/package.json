@@ -1,0 +1,17 @@
+{
+  "name": "views",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "@dam",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "htm": "^2.1.1",
+    "linkstate": "^1.1.1",
+    "preact": "^8.4.2"
+  }
+}

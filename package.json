@@ -1,0 +1,17 @@
+{
+  "name": "poc-modules",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "npx sandbox",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "@dam",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@architect/architect": "^5.5.8",
+    "preact-render-to-string": "^4.1.0"
+  }
+}
