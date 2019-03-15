@@ -4,9 +4,9 @@ const readFile = promisify(fs.readFile)
 const join = require('path').join
 
 exports.handler = async function http (req) {
-  console.log('MODULE', req.params.module)
+  console.log('UTIL MODULE', req.params.module)
   let module = req.params.module
-  let requested = join(__dirname, 'node_modules', '@architect', 'views', 'modules', module)
+  let requested = join(__dirname, 'node_modules', '@architect', 'views', 'modules', 'util', module)
   try {
     let js = await readFile(requested)
     js = js.toString()

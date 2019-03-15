@@ -1,4 +1,4 @@
-module.exports = function Head (props) {
+export default function Head (props) {
   props = props || {}
   var title = props.title || 'POC ESM'
   return `

@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const fs = require('fs')
+const path = require('path')
+// copy ./src/views/modules/vendor/node_modules/htm/preact/standalone.mjs > ./src/views/vendor/preact.mjs
+const origin = path.resolve(__dirname, '../', 'src', 'views', 'modules', 'vendor', 'node_modules', 'htm', 'preact', 'standalone.mjs')
+const destination = path.resolve(__dirname, '../', 'src', 'views', 'modules', 'vendor', 'preact.mjs')
+fs.copyFile(origin, destination, err => {
+  if (err) {
+    console.error(err)
+  } else {
+    console.info('Vendor assets created')
+  }
+})

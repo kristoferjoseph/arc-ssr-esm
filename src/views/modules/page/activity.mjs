@@ -1,6 +1,6 @@
-import { html } from './vendor/preact.mjs'
-import Header from './ui/header.mjs'
-import insert from './insert.mjs'
+import { html } from '../vendor/preact.mjs'
+import Header from '../ui/header.mjs'
+import renderPage from '../util/render-page.mjs'
 
 function Activity (props) {
   return html`
@@ -17,6 +17,6 @@ function Activity (props) {
   `
 }
 
-insert(Activity, {})
+renderPage(Activity, {})
 
 export default Activity

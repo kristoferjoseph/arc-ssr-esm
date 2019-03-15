@@ -1,5 +1,6 @@
-const head = require('./head.js')
-module.exports = function Layout (props) {
+import head from './head.mjs'
+
+export default function Layout (props) {
   return `
 <!DOCTYPE html>
 <html lang="en">

@@ -1,4 +1,4 @@
-module.exports = function Script (src) {
+export default function Script (src) {
   let stage = process.env.NODE_ENV
   stage = stage === 'production' || stage === 'staging' ? stage : ''
   return `

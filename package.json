@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "start": "npx sandbox",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vendor": "node ./scripts/vendor"
   },
   "keywords": [],
   "author": "@dam",

@@ -7,6 +7,7 @@ profile personal
 
 @http
 get /
-get /modules/:module
+get /modules/page/:module
 get /modules/ui/:module
+get /modules/util/:module
 get /modules/vendor/:module
