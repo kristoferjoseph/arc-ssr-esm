@@ -16,7 +16,10 @@ exports.handler = async function http (req) {
     })
     let { output } = bundled
     let out = output[0]
-    let { error, code } = Terser.minify(out.code)
+    let { error, code } = Terser.minify(out.code, {
+      compress: false,
+      mangle: true
+    })
     if (error) throw error
     let body = code
 
