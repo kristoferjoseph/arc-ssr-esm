@@ -4,6 +4,7 @@
     "@architect/data": "^2.0.14",
     "@architect/functions": "^2.0.15",
     "rollup": "^1.6.0",
-    "rollup-plugin-terser": "^4.0.4"
+    "rollup-plugin-terser": "^4.0.4",
+    "terser": "^3.17.0"
   }
 }

@@ -1,5 +1,6 @@
 const join = require('path').join
 const rollup = require('rollup')
+const Terser = require('terser')
 
 exports.handler = async function http (req) {
   let type = req.params.type
@@ -15,7 +16,9 @@ exports.handler = async function http (req) {
     })
     let { output } = bundled
     let out = output[0]
-    let body = out.code
+    let { error, code } = Terser.minify(out.code)
+    if (error) throw error
+    let body = code
 
     return {
       type: 'text/javascript; charset=utf8',
