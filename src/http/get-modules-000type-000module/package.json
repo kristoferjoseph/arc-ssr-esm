@@ -2,6 +2,8 @@
   "name": "poc-esm-get-modules-000type-000module",
   "dependencies": {
     "@architect/data": "^2.0.14",
-    "@architect/functions": "^2.0.15"
+    "@architect/functions": "^2.0.15",
+    "rollup": "^1.6.0",
+    "rollup-plugin-terser": "^4.0.4"
   }
 }

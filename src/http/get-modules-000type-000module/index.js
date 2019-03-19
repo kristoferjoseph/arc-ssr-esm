@@ -1,7 +1,5 @@
-const { promisify } = require('util')
-const fs = require('fs')
-const readFile = promisify(fs.readFile)
 const join = require('path').join
+const rollup = require('rollup')
 
 exports.handler = async function http (req) {
   let type = req.params.type
@@ -9,11 +7,19 @@ exports.handler = async function http (req) {
   console.log('MODULE', type, module)
   let requested = join(__dirname, 'node_modules', '@architect', 'views', 'modules', type, module)
   try {
-    let js = await readFile(requested)
-    js = js.toString()
+    let bundle = await rollup.rollup({
+      input: requested
+    })
+    let bundled = await bundle.generate({
+      format: 'esm'
+    })
+    let { output } = bundled
+    let out = output[0]
+    let body = out.code
+
     return {
       type: 'text/javascript; charset=utf8',
-      body: js
+      body
     }
   } catch (err) {
     return {
