@@ -8,12 +8,6 @@ const cache = {}
 
 exports.handler = async function http (req) {
   let content = render(html`<${Activity}><//>`)
-  // look for file in cache
-  // read file
-  // expand file
-  // hash file
-  // write script with hashed file name
-  // upload to s3
   let scripts = Script('/modules/page/activity.mjs')
   let body = Layout({ content, scripts })
   return {
